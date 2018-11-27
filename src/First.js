@@ -1,11 +1,12 @@
-import React, { Component } from 'react';
-class First extends Component{
- 
-    render(){
-        //child component to be rendered in to parent component App.js
-       //console.log(this.props)
+import React from 'react';
+//UI based components uses functions which get data from the props
+//UI based components dont require render method like class based
+const First = (props) =>{
+       //child component to be rendered in to parent component App.js
        //destructuring to grab all properties
-       const {first} = this.props;
+       //in UI based components this.props not used since
+       //it aquires all props as a function but not as a class
+       const {first} = props;
        const firstList = first.map(first =>{
            //key is used to identify which element is to render in to dom according to id
           return (
@@ -22,6 +23,4 @@ class First extends Component{
        )
             
     }
-}
-
 export default First;
