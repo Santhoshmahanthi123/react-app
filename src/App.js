@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import First from './First'
+import First from './First';
+import AddFirst from './AddFirst';
 class App extends Component {
   //map function takes an array in java script and maps it to new array
   state = {
@@ -15,6 +16,7 @@ class App extends Component {
           <h1>Welcome to React Application.</h1>
           <p>A simple react application react application</p>
           <First first={this.state.first}/>
+          <AddFirst />
       </div>
     );
   }
