@@ -4,7 +4,7 @@ class App extends Component {
   //map function takes an array in java script and maps it to new array
   state = {
     first : [
-    {name : 'Santhosh', age : '22', id:1},
+    {name : 'Santhosh', age : '20', id:1},
     {name : 'Pandu', age :'23', id :2},
     {name : 'Bharath', age :'24', id :3 }
   ]
