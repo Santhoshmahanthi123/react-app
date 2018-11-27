@@ -10,13 +10,23 @@ class App extends Component {
     {name : 'Bharath', age :'24', id :3 }
   ]
   }
+
+  addFirst = (firsts) =>{
+    firsts.id = Math.random();
+    //spread operator used to create the copy of the array
+    let first  = [...this.state.first,firsts];
+    //setting state to the copy created
+    this.setState({
+      first:first
+    })
+  }
   render() {
     return (
       <div className="App">
           <h1>Welcome to React Application.</h1>
           <p>A simple react application react application</p>
           <First first={this.state.first}/>
-          <AddFirst />
+          <AddFirst addFirst = {this.addFirst} />
       </div>
     );
   }

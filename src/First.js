@@ -22,7 +22,7 @@ const First = ({first}) =>{
     //    })
     //directly returning template as a list into return function
        return(
-           <div className="first-list">
+           <div className="first-list" >
              {   
                 first.map(first =>{
                //using ternary operator

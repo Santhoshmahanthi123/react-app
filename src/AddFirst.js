@@ -12,7 +12,7 @@ class AddFirst extends Component{
     }
     handleSubmit = (e) => {
       e.preventDefault();  
-      console.log(this.state);
+      this.props.addFirst(this.state)
     }
     render(){
         return(
