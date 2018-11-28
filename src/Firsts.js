@@ -1,4 +1,5 @@
 import React from 'react';
+import './Firsts.css';
 //UI based components uses functions which get data from the props
 //UI based components dont require render method like class based
 const Firsts = ({firsts, deleteFirst}) =>{
