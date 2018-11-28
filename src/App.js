@@ -30,6 +30,17 @@ class App extends Component {
    firsts : firsts
  })
   }
+  //component life cycle 1.mount 2.update 3.unmount
+  //this invokes when components loads in to the DOM
+ componentDidMount(){
+console.log("components mounted!");
+ }
+ //invokes when the state is updated
+componentDidUpdate(prevProps,prevStates){
+console.log("components updated!");
+console.log(prevProps,prevStates);
+
+}
   render() {
     return (
       <div className="App" >
