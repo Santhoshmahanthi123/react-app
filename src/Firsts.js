@@ -1,7 +1,7 @@
 import React from 'react';
 //UI based components uses functions which get data from the props
 //UI based components dont require render method like class based
-const First = ({first}) =>{
+const Firsts = ({firsts, deleteFirst}) =>{
        //child component to be rendered in to parent component App.js
        //destructuring to grab all properties
        //in UI based components this.props not used since
@@ -22,19 +22,21 @@ const First = ({first}) =>{
     //    })
     //directly returning template as a list into return function
        return(
-           <div className="first-list" >
+           <div className="first-list">
              {   
-                first.map(first =>{
+                firsts.map(first =>{
                //using ternary operator
-                  return first.age > 20 ? ( <div className="First" key={first.id}>
+                  return( 
+                   <div className="First" key={first.id}>
                    <div>Name : {first.name}</div>
                    <div>Age : {first.age}</div>
+                   <button onClick={() =>{deleteFirst(first.id)}}>Delete one</button>
+                   <hr />
                    </div>
-                   ) : null;
+                   )
     })
     }  
-           </div>
-       )
-            
-    }
-export default First;
+    </div>
+ );
+}
+export default Firsts;
